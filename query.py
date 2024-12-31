@@ -52,7 +52,7 @@ documents = TextLoader("./docs/faq.txt", encoding="utf-8").load()
 text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=0, separator="\n")
 splits = text_splitter.split_documents(documents)
 # db = Chroma.from_documents(documents, OpenAIEmbeddings())
-db=Chroma(collection_name="faq_collection", embedding_function=OpenAIEmbeddings(api_key=st.secrets["openai_api_key"])), persist_directory="./faq_db")
+db=Chroma(collection_name="faq_collection", embedding_function=OpenAIEmbeddings(api_key=st.secrets["openai_api_key"]), persist_directory="./faq_db")
 db.add_documents(documents)  
 retriever = db.as_retriever()
 
