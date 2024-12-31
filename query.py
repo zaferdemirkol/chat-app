@@ -14,7 +14,10 @@ import os
 warnings.filterwarnings("ignore")
 
 load_dotenv()
-llm = ChatOpenAI(api_key=st.secrets["openai_api_key"])
+openai_api_key = "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"
+llm = ChatOpenAI(api_key=openai_api_key)
+
+# llm = ChatOpenAI(api_key=st.secrets["openai_api_key"])
 # llm = ChatOpenAI(model="gpt-4o", max_tokens=200)
 chat_history = []
 
