@@ -14,7 +14,7 @@ import os
 warnings.filterwarnings("ignore")
 
 load_dotenv()
-llm = ChatOpenAI(api_key=st.secrets["openai_api_key"], model="gpt-4o", max_tokens=200)
+llm = ChatOpenAI(api_key=st.secrets["openai_api_key"])
 # llm = ChatOpenAI(model="gpt-4o", max_tokens=200)
 chat_history = []
 
