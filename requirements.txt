@@ -10,4 +10,3 @@ colorama
 tiktoken
 streamlit
 streamlit-chat
-pysqlite3-binar
